@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Araba</title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    {% load static %}
+  </head>
+  <body>
+
+
+{% include "netting_youth/header.html" %}
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

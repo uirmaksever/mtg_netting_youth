@@ -1,0 +1,18 @@
+{% extends "netting_youth/base.html" %}
+
+
+{% block content %}
+  <p>{{ object.related_thematic_area }}</p>
+  <p>{{ object.title }}</p>
+  <p>{{ object.description_text }}</p>
+  {% if object.votes.exists request.user.pk %}<a href="#">Vote down</a>{% endif %}
+  <p>{{ object.votes.count }}</p>
+
+  <ul>
+    {% for task in object.related_tasklist_set %}
+      <li>{{ task }}</li>
+    {% endfor %}
+  </ul>
+
+<a href="{% url 'problem-vote-up' object.pk %}">Vote Up</a>
+{% endblock %}

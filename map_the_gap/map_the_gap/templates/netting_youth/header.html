@@ -1,0 +1,30 @@
+<div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-image">
+      <img class="rounded-circle img-thumbnail d-block" src="https://via.placeholder.com/200" alt="">
+    </div>
+    <div class="list-group list-group-flush">
+      <a href="{% url 'user-problems-list' request.user.pk %}" class="list-group-item list-group-item-action bg-light">Followed initiatives</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">My actions</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Trending actions</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">My tasks</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Thematic fields</a>
+
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+
+  </div>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
